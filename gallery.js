@@ -1,13 +1,16 @@
 let mCurrentIndex = 0 // Tracks the current image index
 let mImages = [] // Array to hold GalleryImage objects
-const mUrl = 'https://your-json-url.com' // Replace with actual JSON URL
+const mUrl = 'https://' // Replace with actual JSON URL
 const mWaitTime = 5000 // Timer interval in milliseconds
+
 
 $(document).ready(() => {
   $('.details').hide() // Hide details initially
 
   // Call a function here to start the timer for the slideshow
+$.getJSON("myimages.json", function(){
 
+})
   // Select the moreIndicator button and add a click event to:
   // - toggle the rotation classes (rot90 and rot270)
   // - slideToggle the visibility of the .details section
