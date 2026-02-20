@@ -10,7 +10,7 @@ $(document).ready(() => {
   // Call a function here to start the timer for the slideshow
 $.getJSON("myimages.json", function(){
 
-})
+}) 
   // Select the moreIndicator button and add a click event to:
   // - toggle the rotation classes (rot90 and rot270)
   // - slideToggle the visibility of the .details section
