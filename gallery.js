@@ -1,12 +1,12 @@
 let mCurrentIndex = 0 // Tracks the current image index
 let mImages = [] // Array to hold GalleryImage objects
-const mUrl = 'https://' // Replace with actual JSON URL
+const mUrl = 'myimages.json' // Replace with actual JSON URL
 const mWaitTime = 5000 // Timer interval in milliseconds
 
 
 $(document).ready(() => {
   $('.details').hide() // Hide details initially
-
+  
   // Call a function here to start the timer for the slideshow
 $.getJSON("myimages.json", function(){
 
@@ -25,6 +25,9 @@ $.getJSON("myimages.json", function(){
 
 // Function to fetch JSON data and store it in mImages
 function fetchJSON () {
+  $.getJSON(mUrl, function(data){
+    mImages = data.images
+    swapPhoto()
   // Use $.getJSON here to request the JSON data from mUrl
   // On success, parse the JSON and push each image object into mImages array
   // After JSON is loaded, call swapPhoto() to display the first image
